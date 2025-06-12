@@ -1,4 +1,5 @@
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap');
+  
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap');
     *{
         margin: 0;
         padding: 0;
@@ -608,7 +609,7 @@
 }
 
 /* Optional: Make layout responsive on small screens */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
     .skills-container {
         flex-direction: column;
     }
@@ -632,7 +633,7 @@
 }
 
 /* Optional: Make layout responsive on small screens */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
     .skills-container {
         flex-direction: column;
     }
@@ -964,7 +965,7 @@
 }
 
 /* Hide navbar on small screens by default */
-@media (max-width: 768px) {
+@media (max-width: 368px) {
   .navbar {
     position: absolute;
     top: 70px; /* adjust as needed */
@@ -997,7 +998,7 @@
 }
 
 /* Make the grid responsive: switch to single column on small screens */
-@media (max-width: 768px) {
+@media (max-width: 368px) {
     .about {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1017,7 +1018,7 @@
 }
 
 /* Adjust image size on smaller screens for better layout */
-@media (max-width: 768px) {
+@media (max-width:368px) {
     .about-img img {
         max-width: 90%;
         margin: 0 auto;
@@ -1032,7 +1033,7 @@
 }
 
 /* Smaller heading size on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 368px) {
     .about-text h2 {
         font-size: calc(2rem + 1vw);
         padding-top: 20px;
@@ -1051,7 +1052,7 @@
 }
 
 /* Adjust h4 font size on smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 368px) {
     .about-text h4 {
         font-size: calc(1.5rem + 0.5vw);
         margin: 10px 0 20px;
@@ -1068,7 +1069,7 @@
 }
 
 /* Reduce paragraph margins on smaller screens for better fit */
-@media (max-width: 768px) {
+@media (max-width:368px) {
     .about-text p {
         margin-bottom: 2.5rem;
         margin-right: 1.5rem;
@@ -1297,7 +1298,7 @@ section {
 
 /* Responsive styles added below */
 
-@media (max-width: 1200px) {
+@media (max-width:368px) {
     /* Slightly reduce font sizes and paddings for large screens */
     #services {
         font-size: 18px;
@@ -1321,7 +1322,7 @@ section {
     /* Adjust other elements as needed */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 368px) {
     /* Main adjustments for tablets and small screens */
     #services {
         font-size: 16px;
@@ -1379,7 +1380,7 @@ section {
 
 
 /* Adjust font sizes on small screens */
-@media (max-width: 768px) {
+@media (max-width: 368px) {
     .radial-bars {
         flex-direction: column;
         align-items: center;
@@ -1631,7 +1632,7 @@ section {
 
 
 /* Responsive adjustments for very small screens */
-@media (max-width: 768px) {
+@media (max-width: 368px) {
   .contact {
     flex-direction: column;
   }
@@ -1642,35 +1643,103 @@ section {
 }
 
 
-
-@media (max-width: 768px) {
+@media (max-width: 360px) {
+  /* Container adjustments */
   .contact {
+    display: flex;
     flex-direction: column;
-    padding: 1rem; /* Add padding for small screens */
+    padding: 0.5rem; /* Reduced padding for smaller screens */
+    gap: 1rem; /* Space between sections */
   }
+
+  /* Sections: text and form */
   .contact-text,
   .contact-form {
     flex: 1 1 100%;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
   }
-  /* Optional: Adjust font sizes for small screens */
+
+  /* Headings */
   .contact-text h2 {
-    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-size: clamp(1.2rem, 5vw, 2.2rem); /* Responsive font size */
+    text-align: center;
   }
+
+  /* Subheadings and paragraphs */
   .contact-text h4,
   .contact-text p {
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: clamp(0.8rem, 3vw, 1.6rem);
+    text-align: center;
   }
-  /* Adjust icon sizes if necessary */
+
+  /* Icons */
   .contact-icons a {
-    width: clamp(40px, 8vw, 60px);
-    height: clamp(40px, 8vw, 60px);
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    width: clamp(30px, 6vw, 50px);
+    height: clamp(30px, 6vw, 50px);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Common styles for all form inputs and textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 70%; /* consistent width */
+  height: 70px; /* consistent height for inputs and textarea */
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin: 0.5rem 0; /* optional: spacing between fields */
+  border: 1px solid #ccc; /* optional: border styling */
+  border-radius: 4px; /* optional: rounded corners */
+}
+
+/* Submit button styles */
+.contact-form button {
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem; /* space above button */
+}
+
+/* Optional: media queries for mobile adjustments */
+@media (max-width: 600px) {
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 90%; /* wider on small screens for easier input */
+    height: 70px; /* keep height consistent */
+    font-size: clamp(0.7rem, 4vw, 1rem); /* slightly larger font for readability */
   }
 }
 
+  /* Keep icons size responsive and prevent squeezing */
+
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly; /* even spacing between and around icons */
+  align-items: center; /* vertical alignment */
+  padding: 10px; /* optional padding */
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Optional sizing for icons */
+  font-size: 2rem; /* or your desired size */
+  width: 50px; /* set width if needed */
+  height: 50px; /* set height if needed */
+}
+
+}
+
+
+
 /* Fix font size unit and make it responsive */
-@media (max-width: 767px) {
+@media (max-width:368px) {
     .last-text p {
         font-size: 3.5vw; /* Slightly larger on small screens for readability */
     }
